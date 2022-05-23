@@ -13,5 +13,9 @@ import lombok.ToString;
 @ToString
 public class UserNotAvailableException extends RuntimeException{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8123976387776162293L;
 	String message;
 }

@@ -13,5 +13,9 @@ import lombok.ToString;
 @ToString
 public class MinimumAgeException extends RuntimeException{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8205997374083059340L;
 	String message;
 }

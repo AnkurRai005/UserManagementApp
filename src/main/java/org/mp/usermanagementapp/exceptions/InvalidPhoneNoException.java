@@ -13,5 +13,9 @@ import lombok.ToString;
 @ToString
 public class InvalidPhoneNoException extends RuntimeException{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8731508592205839381L;
 	String message;
 }

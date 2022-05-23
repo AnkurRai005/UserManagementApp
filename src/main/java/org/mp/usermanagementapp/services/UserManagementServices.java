@@ -75,7 +75,7 @@ public class UserManagementServices implements IUserManagementServices{
 	public String deleteUser(Integer userId) {
 		log.info("Deleting User details for User Id: {}.",userId);
 		Optional<User> userRecord = userDao.findById(userId);
-		if(userRecord.isEmpty()) {
+		if(!userRecord.isPresent()) {
 			throw new UserNotAvailableException("User not available for User Id: "+userId);
 		}
 		userDao.deleteById(userId);
@@ -87,7 +87,7 @@ public class UserManagementServices implements IUserManagementServices{
 	public User getUserDetails(Integer userId) {
 		log.info("Finding User details for User Id: {}.",userId);
 		Optional<User> userRecord = userDao.findById(userId);
-		if(userRecord.isEmpty()) {
+		if(!userRecord.isPresent()) {
 			throw new UserNotAvailableException("User not available for User Id: "+userId);
 		}
 		log.info("User details for User Id: {} found.",userId);
